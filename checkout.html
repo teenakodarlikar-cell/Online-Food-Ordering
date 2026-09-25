@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>🍴</span> Foodie
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="index.html#offers">Offers</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button class="cart" onclick="window.location.href='cart.html'">
+                🛒 Cart <span id="cartCount">0</span>
+            </button>
+
+            <button class="login">Login</button>
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- Checkout Heading -->
+
+<section class="checkout-header">
+
+    <p>CHECKOUT</p>
+
+    <h1>Complete Your Order</h1>
+
+    <span>Enter your details and choose your payment method.</span>
+
+</section>
+
+
+<!-- Checkout -->
+
+<section class="checkout-section">
+
+    <!-- Customer Details -->
+
+    <div class="customer-box">
+
+        <h2>Delivery Details</h2>
+
+        <div class="form-row">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="customerName" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number">
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter email address">
+        </div>
+
+
+        <div class="form-group">
+            <label>Delivery Address</label>
+            <textarea id="address" rows="4"
+                placeholder="Enter your complete delivery address"></textarea>
+        </div>
+
+
+        <h2 class="payment-title">Payment Method</h2>
+
+        <div class="payment-options">
+
+            <label class="payment-card">
+                <input type="radio" name="payment" value="Cash on Delivery" checked>
+                <div>
+                    <strong>💵 Cash on Delivery</strong>
+                    <small>Pay when your order arrives</small>
+                </div>
+            </label>
+
+
+            <label class="payment-card">
+                <input type="radio" name="payment" value="UPI">
+                <div>
+                    <strong>📱 UPI</strong>
+                    <small>Pay securely using UPI</small>
+                </div>
+            </label>
+
+
+            <label class="payment-card">
+                <input type="radio" name="payment" value="Card">
+                <div>
+                    <strong>💳 Card</strong>
+                    <small>Credit or debit card</small>
+                </div>
+            </label>
+
+        </div>
+
+
+        <button class="place-order-btn" onclick="confirmOrder()">
+            Place Order →
+        </button>
+
+    </div>
+
+
+    <!-- Order Summary -->
+
+    <div class="checkout-summary">
+
+        <h2>Your Order</h2>
+
+        <div id="checkoutItems"></div>
+
+        <hr>
+
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="checkoutSubtotal">₹0</strong>
+        </div>
+
+        <div class="summary-row">
+            <span>Delivery Fee</span>
+            <strong>₹40</strong>
+        </div>
+
+        <div class="summary-row">
+            <span>Discount</span>
+            <strong id="checkoutDiscount">₹0</strong>
+        </div>
+
+        <hr>
+
+        <div class="summary-total">
+            <span>Total</span>
+            <strong id="checkoutTotal">₹0</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <div class="logo">
+                <span>🍴</span> Foodie
+            </div>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#offers">Offers</a>
+            <a href="index.html#about">About</a>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📧 foodie@example.com</p>
+            <p>📞 +91 98765 43210</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Foodie. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

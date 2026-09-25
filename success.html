@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Order Confirmed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>🍴</span> Foodie
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="index.html#offers">Offers</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+
+            <button class="cart" onclick="window.location.href='menu.html'">
+                🛒 Order More
+            </button>
+
+        </div>
+
+    </nav>
+</header>
+
+
+<section class="success-section">
+
+    <div class="success-card">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <p class="success-small">ORDER CONFIRMED</p>
+
+        <h1>Thank You!</h1>
+
+        <h2>Your order has been placed successfully.</h2>
+
+        <p class="success-message">
+            Your delicious food is being prepared and will be
+            delivered to your doorstep soon.
+        </p>
+
+
+        <div class="order-number">
+            <span>Order ID</span>
+            <strong id="orderId">#----</strong>
+        </div>
+
+
+        <div class="success-details">
+
+            <div>
+                <span>Customer</span>
+                <strong id="successName">Customer</strong>
+            </div>
+
+            <div>
+                <span>Payment</span>
+                <strong id="successPayment">Cash on Delivery</strong>
+            </div>
+
+        </div>
+
+
+        <div class="delivery-time">
+            🚴 Estimated delivery
+            <strong>30 - 40 minutes</strong>
+        </div>
+
+
+        <div class="success-buttons">
+
+            <button onclick="window.location.href='menu.html'">
+                Order More Food
+            </button>
+
+            <button class="home-btn"
+                    onclick="window.location.href='index.html'">
+                Back to Home
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <div class="logo">
+                <span>🍴</span> Foodie
+            </div>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#offers">Offers</a>
+            <a href="index.html#about">About</a>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📧 foodie@example.com</p>
+            <p>📞 +91 98765 43210</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Foodie. All Rights Reserved.
+    </div>
+
+</footer>
+
+<script>
+    let savedOrderId = localStorage.getItem("orderId");
+
+    if (savedOrderId) {
+        document.getElementById("orderId").innerText = "#" + savedOrderId;
+    }
+
+    let savedName = localStorage.getItem("customerName");
+
+    if (savedName) {
+        document.getElementById("successName").innerText = savedName;
+    }
+
+    let savedPayment = localStorage.getItem("paymentMethod");
+
+    if (savedPayment) {
+        document.getElementById("successPayment").innerText = savedPayment;
+    }
+</script>
+
+<script src="script.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

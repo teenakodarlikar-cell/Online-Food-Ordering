@@ -1,0 +1,10 @@
+﻿# C++ executable
+backend/backend.exe
+# User data
+backend/users.txt
+backend/orders.txt
+# VS Code
+.vscode/
+# Temporary files
+*.tmp
+*.log

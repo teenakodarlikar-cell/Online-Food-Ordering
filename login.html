@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Foodie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🍴 <span>Foodie</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#offers">Offers</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+        <button class="cart-btn" onclick="goToCart()">
+            🛒 Cart
+        </button>
+
+    </nav>
+
+
+    <!-- Login Section -->
+    <section class="login-section">
+
+        <div class="login-container">
+
+            <!-- Left Side -->
+            <div class="login-image">
+
+                <div class="login-overlay">
+                    <h1>Good Food.</h1>
+                    <h1>Good Mood.</h1>
+
+                    <p>
+                        Order your favourite food and
+                        enjoy delicious meals at your doorstep.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Right Side -->
+            <div class="login-box">
+
+                <h2 id="formTitle">Welcome Back!</h2>
+
+                <p class="login-subtitle" id="formSubtitle">
+                    Login to continue ordering delicious food.
+                </p>
+
+
+                <!-- Register Name -->
+                <div class="input-group register-field">
+                    <label>Full Name</label>
+                    <input type="text" id="registerName"
+                           placeholder="Enter your name">
+                </div>
+
+
+                <!-- Email -->
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="loginEmail"
+                           placeholder="Enter your email">
+                </div>
+
+
+                <!-- Phone -->
+                <div class="input-group register-field">
+                    <label>Phone Number</label>
+                    <input type="tel" id="registerPhone"
+                           placeholder="Enter your phone number">
+                </div>
+
+
+                <!-- Password -->
+                <div class="input-group">
+                    <label>Password</label>
+
+                    <div class="password-box">
+                        <input type="password"
+                               id="loginPassword"
+                               placeholder="Enter your password">
+
+                        <button type="button"
+                                onclick="showPassword()">
+                            👁
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="input-group register-field">
+                    <label>Confirm Password</label>
+
+                    <input type="password"
+                           id="confirmPassword"
+                           placeholder="Confirm your password">
+                </div>
+
+
+                <button class="login-main-btn"
+                        onclick="loginUser()"
+                        id="loginButton">
+                    Login
+                </button>
+
+
+                <p class="switch-text">
+                    <span id="switchMessage">
+                        Don't have an account?
+                    </span>
+
+                    <button onclick="switchForm()"
+                            id="switchButton">
+                        Create Account
+                    </button>
+                </p>
+
+
+                <button class="guest-btn"
+                        onclick="window.location.href='menu.html'">
+                    Continue as Guest
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <h3>🍴 Foodie</h3>
+
+        <p>
+            Delicious food delivered to your doorstep.
+        </p>
+
+        <p>
+            © 2026 Foodie. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

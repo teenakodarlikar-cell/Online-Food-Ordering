@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>🍴</span> Foodie
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#offers">Offers</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+
+                <div class="search">
+                    🔍
+                    <input type="text" placeholder="Search food...">
+                </div>
+
+                <button class="cart">
+                    🛒 Cart <span id="cartCount">0</span>
+                </button>
+
+                <button onclick="window.location.href='login.html'">
+                Login
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Cart Heading -->
+    <section class="cart-header">
+
+        <p>YOUR ORDER</p>
+
+        <h1>Your Shopping Cart</h1>
+
+        <span>Review your items before placing your order.</span>
+
+    </section>
+
+
+    <!-- Cart -->
+    <section class="cart-section">
+
+        <div id="cartItems" class="cart-items">
+        </div>
+
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">₹0</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery Fee</span>
+                <strong id="delivery">₹40</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Discount</span>
+                <strong id="discount">₹0</strong>
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <strong id="total">₹40</strong>
+            </div>
+
+            <button class="checkout-btn" onclick="placeOrder()">
+                Proceed to Checkout →
+            </button>
+
+            <button class="continue-btn" onclick="window.location.href='menu.html'">
+                ← Continue Shopping
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <div class="logo">
+                    <span>🍴</span> Foodie
+                </div>
+
+                <p>
+                    Delicious food delivered to your doorstep.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="index.html#offers">Offers</a>
+                <a href="index.html#about">About</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📧 foodie@example.com</p>
+                <p>📞 +91 98765 43210</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Foodie. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Online Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <span>🍴</span> Foodie
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+
+            <div class="search">
+            🔍
+                <input type="text" placeholder="Search food...">
+            </div>
+
+                <button class="cart" onclick="goToCart()">
+                    🛒 Cart
+                </button>
+
+                <span id="userSection">
+                    <a href="login.html">Login</a>
+                </span>
+
+                    </div>
+                    </nav>
+                    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">WELCOME TO FOODIE</p>
+
+            <h1>
+                Delicious Food,
+                <span>Delivered Fast.</span>
+            </h1>
+
+            <p class="hero-description">
+                Order your favourite meals from the best restaurants
+                and enjoy fresh, delicious food at your doorstep.
+            </p>
+
+           <div class="hero-buttons">
+    <button class="order-btn" onclick="window.location.href='menu.html'">
+        Order Now →
+    </button>
+
+    <button class="menu-btn" onclick="window.location.href='menu.html'">
+        Explore Menu
+    </button>
+</div>
+
+            <div class="delivery-info">
+                <div>
+                    <strong>30 min</strong>
+                    <small>Average Delivery</small>
+                </div>
+
+                <div>
+                    <strong>4.8 ⭐</strong>
+                    <small>Customer Rating</small>
+                </div>
+
+                <div>
+                    <strong>100+</strong>
+                    <small>Food Items</small>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80"
+                 alt="Delicious Pizza">
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <div class="section-heading">
+            <p>EXPLORE</p>
+            <h2>What are you craving?</h2>
+        </div>
+
+        <div class="category-container">
+
+           <div class="category-card" onclick="window.location.href='menu.html?category=pizza'">
+    <div class="category-icon">🍕</div>
+    <h3>Pizza</h3>
+    <p>20+ Items</p>
+</div>
+
+            <div class="category-card" onclick="window.location.href='menu.html?category=burger'">
+    <div class="category-icon">🍔</div>
+    <h3>Burgers</h3>
+    <p>15+ Items</p>
+</div>
+
+            <div class="category-card" onclick="window.location.href='menu.html?category=chicken'">
+    <div class="category-icon">🍗</div>
+    <h3>Chicken</h3>
+    <p>18+ Items</p>
+</div>
+
+            <div class="category-card" onclick="window.location.href='menu.html?category=noodles'">
+    <div class="category-icon">🍜</div>
+    <h3>Noodles</h3>
+    <p>12+ Items</p>
+</div>
+
+            <div class="category-card" onclick="window.location.href='menu.html?category=biryani'">
+    <div class="category-icon">🍚</div>
+    <h3>Biryani</h3>
+    <p>16+ Items</p>
+</div>
+
+            <div class="category-card" onclick="window.location.href='menu.html?category=drinks'">
+    <div class="category-icon">🥤</div>
+    <h3>Drinks</h3>
+    <p>10+ Items</p>
+</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popular Food -->
+    <section class="popular" id="menu">
+
+        <div class="section-heading">
+            <p>OUR MENU</p>
+            <h2>Popular Dishes</h2>
+            <span>Our most loved dishes, prepared fresh for you.</span>
+        </div>
+
+        <div class="food-container">
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=600&q=80"
+                     alt="Burger">
+
+                <div class="food-info">
+                    <div class="food-name">
+                        <h3>Classic Burger</h3>
+                        <span>⭐ 4.8</span>
+                    </div>
+
+                    <p>Juicy burger with fresh vegetables and special sauce.</p>
+
+                    <div class="food-bottom">
+                        <strong>₹149</strong>
+                        <button onclick="addToCart('Classic Burger', 149)">
+                            Add +
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80"
+                     alt="Pizza">
+
+                <div class="food-info">
+                    <div class="food-name">
+                        <h3>Cheese Pizza</h3>
+                        <span>⭐ 4.9</span>
+                    </div>
+
+                    <p>Loaded with cheese, fresh toppings and tasty herbs.</p>
+
+                    <div class="food-bottom">
+                        <strong>₹249</strong>
+                        <button onclick="addToCart('Cheese Pizza', 249)">
+    Add +
+</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=600&q=80"
+                     alt="Biryani">
+
+                <div class="food-info">
+                    <div class="food-name">
+                        <h3>Chicken Biryani</h3>
+                        <span>⭐ 4.7</span>
+                    </div>
+
+                    <p>Fragrant basmati rice with delicious spicy chicken.</p>
+
+                    <div class="food-bottom">
+                        <strong>₹199</strong>
+                        <button onclick="addToCart('Chicken Biryani', 199)">
+    Add +
+</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Offer -->
+    <section class="offer" id="offers">
+
+        <div class="offer-text">
+            <p>LIMITED TIME OFFER</p>
+            <h2>Get 20% OFF on your first order!</h2>
+            <span>Use code <strong>FOOD20</strong> while placing your order.</span>
+            <button onclick="window.location.href='menu.html'">
+    Order Now →
+</button>
+        </div>
+
+        <div class="offer-icon">
+            🍔
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="about">
+
+        <div class="section-heading">
+            <p>WHY FOODIE?</p>
+            <h2>We make food ordering easy</h2>
+        </div>
+
+        <div class="why-container">
+
+            <div class="why-card">
+                <div>🚀</div>
+                <h3>Fast Delivery</h3>
+                <p>Get your favourite food delivered quickly to your doorstep.</p>
+            </div>
+
+            <div class="why-card">
+                <div>🥗</div>
+                <h3>Fresh Food</h3>
+                <p>Freshly prepared meals with quality ingredients.</p>
+            </div>
+
+            <div class="why-card">
+                <div>💳</div>
+                <h3>Easy Ordering</h3>
+                <p>Simple and convenient ordering experience for everyone.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <div class="footer-content">
+
+            <div>
+                <div class="logo">
+                    <span>🍴</span> Foodie
+                </div>
+
+                <p>
+                    Delicious food delivered to your doorstep.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+               <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="#offers">Offers</a>
+                <a href="#about">About</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>📧 foodie@example.com</p>
+                <p>📞 +91 98765 43210</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Foodie. All Rights Reserved.
+        </div>
+
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
