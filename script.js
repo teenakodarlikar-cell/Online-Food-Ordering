@@ -187,6 +187,11 @@ function filterCategory(category) {
     });
 }
 
+
+// ========================================
+// FOOD IMAGES
+// ========================================
+
 function getFoodImage(name) {
 
     const images = {
@@ -216,9 +221,11 @@ function getFoodImage(name) {
         "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=300&q=80"
     };
 
-    return images[name] || 
+    return images[name] ||
         "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=300&q=80";
 }
+
+
 // ========================================
 // DISPLAY CART
 // ========================================
@@ -677,8 +684,12 @@ function confirmOrder() {
     };
 
 
+    // ========================================
+    // RENDER BACKEND - ORDER
+    // ========================================
+
     fetch(
-        "http://localhost:8080/order",
+        "https://foodie-backend-6pku.onrender.com/order",
         {
             method: "POST",
 
@@ -762,7 +773,7 @@ function confirmOrder() {
         console.error(error);
 
         alert(
-            "Unable to connect to C++ backend. Please start the backend."
+            "Unable to connect to C++ backend. Please try again."
         );
     });
 }
@@ -1043,8 +1054,12 @@ function loginAccount() {
     };
 
 
+    // ========================================
+    // RENDER BACKEND - LOGIN
+    // ========================================
+
     fetch(
-        "http://localhost:8080/login",
+        "https://foodie-backend-6pku.onrender.com/login",
         {
             method: "POST",
 
@@ -1100,7 +1115,7 @@ function loginAccount() {
         console.error(error);
 
         alert(
-            "Unable to connect to C++ backend. Please start the backend."
+            "Unable to connect to C++ backend. Please try again."
         );
     });
 }
@@ -1178,8 +1193,12 @@ function registerUser() {
     };
 
 
+    // ========================================
+    // RENDER BACKEND - REGISTER
+    // ========================================
+
     fetch(
-        "http://localhost:8080/register",
+        "https://foodie-backend-6pku.onrender.com/register",
         {
             method: "POST",
 
@@ -1215,7 +1234,7 @@ function registerUser() {
         console.error(error);
 
         alert(
-            "Unable to connect to C++ backend. Please start the backend."
+            "Unable to connect to C++ backend. Please try again."
         );
     });
 }
