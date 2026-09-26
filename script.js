@@ -413,7 +413,7 @@ function updateSummary() {
 
 
     let delivery =
-        subtotal > 0 ? 40 : 0;
+        subtotal > 0 ? 10 : 0;
 
     let discount =
         subtotal >= 500 ? 50 : 0;
@@ -657,7 +657,7 @@ function confirmOrder() {
     });
 
 
-    const delivery = 40;
+    const delivery = 10;
 
     const discount =
         subtotal >= 500 ? 50 : 0;
