@@ -527,7 +527,7 @@ function displayCheckout() {
 
 
     const delivery =
-        cart.length > 0 ? 40 : 0;
+        cart.length > 0 ? 10 : 0;
 
     const discount =
         subtotal >= 500 ? 50 : 0;
